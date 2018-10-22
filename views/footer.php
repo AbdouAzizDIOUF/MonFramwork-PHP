@@ -1,5 +1,3 @@
-        <div class="starter-template">
-
         </div>
 
     </div><!-- /.container -->

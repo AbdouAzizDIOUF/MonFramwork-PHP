@@ -3,8 +3,12 @@
 require '../vendor/autoload.php';
 
 
-    $renderer = new \Framework\Renderer();
-    $renderer->addPath(dirname(__DIR__) . '/views');
+    $renderer = new \Framework\Renderer\TwigRenderer(dirname(__DIR__) . '/views');
+
+    // $loader = new Twig_Loader_Filesystem(dirname(__DIR__) . '/views');
+    // $twig = new Twig_Environment($loader, []);
+
+    //$renderer->addPath(dirname(__DIR__) . '/views');
     $app = new \Framework\App([
         \App\Blog\BlogModule::class
       ], [

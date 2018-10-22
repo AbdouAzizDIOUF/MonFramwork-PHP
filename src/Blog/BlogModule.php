@@ -11,7 +11,7 @@ class BlogModule
 
     private $renderer;
 
-    public function __construct(Router $router, \Framework\Renderer $renderer)
+    public function __construct(Router $router, \Framework\Renderer\RendererInterface $renderer)
     {
         $this->renderer = $renderer;
         $this->renderer->addPath('blog', __DIR__ . '/views');
