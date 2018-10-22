@@ -1,7 +1,7 @@
 <?php
 namespace Tests\Framework;
 
-use Framework\Router;
+//use Framework\Router;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Psr7\ServerRequest;
 
@@ -12,7 +12,7 @@ class RouterTest extends TestCase
 
     public function setUp()
     {
-        $this->router = new Router();
+        $this->router = new \Framework\Router();
     }
 
     public function testGetMethod()

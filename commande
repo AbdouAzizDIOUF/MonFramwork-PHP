@@ -1,0 +1,1 @@
+1°)/var/www/html/MonFramwork$ php -S localhost:80 -d display_errors=1 -t public/

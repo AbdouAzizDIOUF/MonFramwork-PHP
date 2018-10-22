@@ -23,7 +23,7 @@ class Route
         return $this->callback;
     }
    /**
-    *get the url parameters
+    *   get the url parameters
     * @return string[]
     */
     public function getParams(): array

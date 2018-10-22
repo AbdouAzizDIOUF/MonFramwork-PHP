@@ -35,7 +35,7 @@
           $this->assertEquals(200, $response->getStatusCode());
           $requestSingle = new \GuzzleHttp\Psr7\ServerRequest('GET', '/blog/article-de-test');
           $responseSingle = $app->run($requestSingle);
-           $this->assertContains('<h1>Bienvenue sur l\'article article-de-test</h1>', (string)$responseSingle->getBody());
+          $this->assertContains('<h1>Bienvenue sur l\'article article-de-test</h1>', (string)$responseSingle->getBody());
       }
       /**
        *

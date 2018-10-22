@@ -44,6 +44,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-server-handler" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/psr/http-server-middleware" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-expressive-fastroute" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-expressive-router" />
     </include_path>
   </component>
   <component name="PhpUnit">
