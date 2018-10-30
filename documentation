@@ -36,6 +36,7 @@ Le PSR c'est l'organisme qui est chargé des standards pour PHP et la compatibli
 		-> composer require PHP-DI/PHP-DI
 
 
+
 -> php -S localhost:8000 -d display_errors=1 -t "dossier ou se trouve le index.php" : Ceci permet d'avoir les erreurs sur le navigateur
 			ex: php -S localhost:8080 -d display_errors=1 -t public/
 

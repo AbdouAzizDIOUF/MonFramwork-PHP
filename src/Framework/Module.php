@@ -1,9 +1,10 @@
 <?php
     namespace Framework;
 
-    class Module{
+class Module
+{
 
-        const DEFINITIONS = null;
-    }
-
-?>
+    const DEFINITIONS = null;
+     const MIGRATIONS = null;
+          const SEEDS = null;
+}

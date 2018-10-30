@@ -20,8 +20,7 @@ class PHPRenderer implements RendererInterface
 
     public function __construct(?string $defaultPath = null)
     {
-        if (!is_null($defaultPath))
-        {
+        if (!is_null($defaultPath)) {
             $this->addPath($defaultPath);
         }
     }

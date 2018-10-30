@@ -5,9 +5,8 @@
     use GuzzleHttp\Psr7\ServerRequest as Request;
     use Framework\Renderer\RendererInterface;
 
-
-
-   class BlogAction{
+class BlogAction
+{
 
     private $renderer;
 
@@ -19,7 +18,7 @@
     public function __invoke(Request $request)
     {
         $slug = $request->getAttribute('slug');
-        if($slug){
+        if ($slug) {
             return $this->show($slug);
         }
         return $this->index();
@@ -34,7 +33,4 @@
     {
         return $this->renderer->render('@blog/show', ['slug' => $slug]);
     }
-
-   }
-
-?>
+}
