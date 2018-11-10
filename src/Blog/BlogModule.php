@@ -3,8 +3,6 @@
 
     use Framework\Router;
     use App\Blog\Actions\BlogAction;
-    //use Prs\Http\Message\ServerRequestInterface as Request;
-    use GuzzleHttp\Psr7\ServerRequest as Request;
     use Framework\Renderer\RendererInterface;
 
 class BlogModule extends \Framework\Module
@@ -16,7 +14,7 @@ class BlogModule extends \Framework\Module
     public function __construct(string $prefix, Router $router, RendererInterface $renderer)
     {
         $renderer->addPath('blog', __DIR__ . '/views');
-        $router->get($prefix, BlogAction::class, 'blog.index');
-        $router->get($prefix . '/{slug:[a-z\-0-9]+}', BlogAction::class, 'blog.show');
+        $router->addRoute($prefix, BlogAction::class, 'blog.index');
+        $router->addRoute($prefix . '/{slug:[a-z\-0-9]+}-{id:[0-9]+}', BlogAction::class, 'blog.show');
     }
 }

@@ -18,9 +18,11 @@ return
         'migrations' => $migrations,
              'seeds' => $seeds
     ],
-    'environments' => [
+    'environments' =>
+    [
         'default_database' => 'development',
-            'development' => [
+            'development' =>
+            [
                 'adapter' => 'mysql',
                 'host'    => $app->getContainer()->get('database.host'),
                 'name'    => $app->getContainer()->get('database.name'),

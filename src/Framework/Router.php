@@ -14,7 +14,7 @@ class Router
         $this->router = new \Zend\Expressive\Router\FastRouteRouter();
     }
 
-    public function get(string $path, $callable, string $name)
+    public function addRoute(string $path, $callable, string $name)
     {
         $this->router->addRoute(new \Zend\Expressive\Router\Route($path, $callable, ['GET'], $name));
     }
@@ -36,8 +36,12 @@ class Router
             );
     }
 
-    public function generateUri(string $name, array $params = []): ?string
+    public function generateUri(string $name, array $params = [], array $queryParams = []): ?string
     {
-        return $this->router->generateUri($name, $params);
+        $uri = $this->router->generateUri($name, $params);
+        if (!empty($queryParams)) {
+            return $uri . '?' . http_build_query($queryParams);
+        }
+        return $uri;
     }
 }

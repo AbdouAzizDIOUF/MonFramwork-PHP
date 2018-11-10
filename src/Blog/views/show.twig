@@ -2,6 +2,10 @@
 {% block title slug %}
 {% block body %}
 
-<h1>Bien venue sur l'article {{ slug }}</h1>
+    <h1>Bien venue sur l'article {{ post.name }}</h1>
+
+    <p class="text-muted">{{ post.create_at | ago }}</p>
+
+    {{ post.content | nl2br }}
 
 {% endblock %}
