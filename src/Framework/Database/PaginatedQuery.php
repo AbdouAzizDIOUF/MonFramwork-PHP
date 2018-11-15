@@ -25,15 +25,6 @@ class PaginatedQuery implements AdapterInterface
         $this->entity = $entity;
     }
     /**
-     * returns the numbers of resultats
-     * @return integer the number of results
-     */
-    public function getNbResults(): int
-    {
-        return $this->pdo->query($this->countQuery)->fetchColumn();
-    }
-
-    /**
      * Returns an slice of the results.
      *
      * @param integer $offset The offset.
@@ -49,5 +40,13 @@ class PaginatedQuery implements AdapterInterface
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->entity);
         $statement->execute();
         return $statement->fetchAll();
+    }
+    /**
+     * returns the numbers of resultats
+     * @return integer the number of results
+     */
+    public function getNbResults(): int
+    {
+        return $this->pdo->query($this->countQuery)->fetchColumn();
     }
 }

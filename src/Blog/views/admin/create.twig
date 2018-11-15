@@ -1,0 +1,22 @@
+{% extends '@admin/layout.twig' %}
+{% block title "ajout d'un article" %}
+{% block body %}
+    <h1>Ajouter un article</h1>
+
+    <form action="{{ path('blog.admin.create') }}" method="post">
+        <div class="form-group">
+            <label for="name">Titre de l'article</label>
+            <input type="text" name="name" id="name" class="form-control" required="">
+        </div>
+        <div class="form-group">
+            <label for="slug">Titre de l'article</label>
+            <input type="text" name="slug" id="slug" class="form-control" required="">
+        </div>
+        <div class="form-group">
+            <label for="content">Contenu</label>
+            <textarea name="content" id="content" rows="8" cols="70" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+
+{% endblock %}
