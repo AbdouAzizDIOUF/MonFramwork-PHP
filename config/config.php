@@ -1,5 +1,7 @@
 <?php
 
+use Framework\Session\PHPSession;
+use Framework\Session\SessionInterface;
 use Psr\Container\ContainerInterface;
 use function DI\factory;
 use function DI\get;
@@ -16,8 +18,10 @@ use function DI\object;
                 get(\Framework\Router\RouterTwigExtension::class),
                 get(\Framework\Twig\PagerFantaExtension::class),
                 get(\Framework\Twig\TestExtension::class),
-                get(\Framework\Twig\TimeExtension::class)
+                get(\Framework\Twig\TimeExtension::class),
+                get(\Framework\Twig\FlashExtension::class)
             ],
+            SessionInterface::class => object(PHPSession::class),
             \Framework\Router::class => object(),
             \Framework\Renderer\RendererInterface::class => factory(\Framework\Renderer\TwigRendererFactory::class),
             \PDO::class => function (ContainerInterface $c) {
