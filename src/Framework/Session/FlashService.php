@@ -11,24 +11,34 @@ class FlashService
     {
         $this->session = $session;
     }
-    public function success(string $message)
+    /**
+     * Messsage de success
+     * @param  string $message [description]
+     * @return void
+     */
+    public function success(string $message): void
     {
         $flash = $this->session->get($this->sessionKey, []);
         $flash['success'] = $message;
         $this->session->set($this->sessionKey, $flash);
     }
 
-    public function error(string $message)
+    /**
+     * Message d'erreur
+     * @param  string $message [description]
+     * @return void
+     */
+    public function error(string $message): void
     {
         $flash = $this->session->get($this->sessionKey, []);
         $flash['success'] = $message;
         $this->session->set($this->sessionKey, $flash);
     }
 
-    public function get(string $type):?string
+    public function get(string $type): ?string
     {
         if (is_null($this->message)) {
-            $this->message = $flash = $this->session->get($this->sessionKey, []);
+            $this->message = $this->session->get($this->sessionKey, []);
             $this->session->delete($this->sessionKey);
         }
         if (array_key_exists($type, $this->message)) {
