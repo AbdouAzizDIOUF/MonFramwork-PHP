@@ -1,68 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e13c9f85-c6d8-40ac-8689-b07fe35f5470" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/MonFramwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MonFramwork.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DEADJOE" beforeDir="false" afterPath="$PROJECT_DIR$/DEADJOE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commande" beforeDir="false" afterPath="$PROJECT_DIR$/commande" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phinx.php" beforeDir="false" afterPath="$PROJECT_DIR$/phinx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/AdminModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AdminModule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/views/layout.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/BlogModule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Entity/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/db/migrations/20181030123612_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/db/migrations/20181030123612_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/db/seeds/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/db/seeds/PostSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/create.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/create.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/edit.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/form.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/form.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/show.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/show.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Actions/RouterAwareAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Actions/RouterAwareAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Module.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/PHPRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/PHPRenderer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/TwigRendererFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/TwigRendererFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Router/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/TestExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/TestExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/TimeExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/TimeExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Validator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Validator/ValidationError.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Validator/ValidationError.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ter" beforeDir="false" afterPath="$PROJECT_DIR$/ter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,30 +63,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="monsupersite@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="root@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,7 +82,6 @@
       <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
@@ -159,6 +129,7 @@
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aVk5qZTTkwi45AyguqvDvkzm9b" />
@@ -178,7 +149,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -201,11 +172,47 @@
       <workItem from="1557691261347" duration="9573000" />
       <workItem from="1560727781748" duration="183000" />
       <workItem from="1586827969402" duration="148000" />
-      <workItem from="1586828130947" duration="491000" />
+      <workItem from="1586828130947" duration="1557000" />
+      <workItem from="1586865016579" duration="11132000" />
+      <workItem from="1586881502002" duration="10586000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="429" y="145" width="732" height="644" key="#Inspections" timestamp="1586906741006">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="429" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1586906741006" />
+    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586877313417">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1586877313417" />
+    <state x="520" y="376" width="550" height="182" key="ComposerInitDialogKey" timestamp="1586865156171">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="520" y="376" width="550" height="182" key="ComposerInitDialogKey/0.27.1600.873@0.27.1600.873" timestamp="1586865156171" />
+    <state x="289" y="98" width="1022" height="737" key="SettingsEditor" timestamp="1586870948575">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="289" y="98" width="1022" height="737" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1586870948575" />
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1586895758374">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1586895758374" />
   </component>
 </project>

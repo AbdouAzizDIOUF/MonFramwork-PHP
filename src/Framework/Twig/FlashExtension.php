@@ -2,8 +2,10 @@
 namespace Framework\Twig;
 
 use Framework\Session\FlashService;
+use Twig_Extension;
+use Twig_SimpleFunction;
 
-class FlashExtension extends \Twig_Extension
+class FlashExtension extends Twig_Extension
 {
     private $flashService;
 
@@ -15,7 +17,7 @@ class FlashExtension extends \Twig_Extension
     public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('flash', [$this, 'getFlash'])
+            new Twig_SimpleFunction('flash', [$this, 'getFlash'])
         ];
     }
     public function getFlash($type): ?string

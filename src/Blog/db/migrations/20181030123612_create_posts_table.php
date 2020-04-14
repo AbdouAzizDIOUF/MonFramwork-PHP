@@ -1,10 +1,12 @@
 <?php
 
 
-class CreatePostsTable extends \Phinx\Migration\AbstractMigration
+use Phinx\Migration\AbstractMigration;
+
+class CreatePostsTable extends AbstractMigration
 {
 
-    public function change()
+    public function change(): void
     {
         $this->table('posts')
             ->addColumn('name', 'string')

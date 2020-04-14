@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Factory;
 use Phinx\Seed\AbstractSeed;
 
 class PostSeeder extends AbstractSeed
@@ -8,7 +9,7 @@ class PostSeeder extends AbstractSeed
     public function run()
     {
         $data = [];
-        $faker = \Faker\Factory::create('fr_FR');
+        $faker = Factory::create('fr_FR');
         for ($i = 0; $i<100; ++$i) {
             $date = $faker->unixTime('now');
             $data[] = [

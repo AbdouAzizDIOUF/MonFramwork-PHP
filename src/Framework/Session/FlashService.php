@@ -13,7 +13,7 @@ class FlashService
     }
     /**
      * Messsage de success
-     * @param  string $message [description]
+     * @param  string $message
      * @return void
      */
     public function success(string $message): void
@@ -25,7 +25,7 @@ class FlashService
 
     /**
      * Message d'erreur
-     * @param  string $message [description]
+     * @param  string $message
      * @return void
      */
     public function error(string $message): void
@@ -37,7 +37,7 @@ class FlashService
 
     public function get(string $type): ?string
     {
-        if (is_null($this->message)) {
+        if ($this->message === null) {
             $this->message = $this->session->get($this->sessionKey, []);
             $this->session->delete($this->sessionKey);
         }

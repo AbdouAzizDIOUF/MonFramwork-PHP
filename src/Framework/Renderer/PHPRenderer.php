@@ -20,7 +20,7 @@ class PHPRenderer implements RendererInterface
 
     public function __construct(?string $defaultPath = null)
     {
-        if (!is_null($defaultPath)) {
+        if ($defaultPath !== null) {
             $this->addPath($defaultPath);
         }
     }
@@ -31,7 +31,7 @@ class PHPRenderer implements RendererInterface
      */
     public function addPath(string $namespace, ?string $path = null): void
     {
-        if (is_null($path)) {
+        if ($path === null) {
             $this->paths[self::DEFAULT_NAMESPACE] = $namespace;
         } else {
             $this->paths[$namespace] = $path;
@@ -44,6 +44,7 @@ class PHPRenderer implements RendererInterface
      *  $this->render('@blog/view');
      * @param string $view
      * @param array $params
+     * @return string
      */
     public function render(string $view, array $params = []): string
     {

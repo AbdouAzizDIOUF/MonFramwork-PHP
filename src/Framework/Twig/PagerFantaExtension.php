@@ -4,37 +4,36 @@ namespace Framework\Twig;
 use Framework\Router;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\View\TwitterBootstrap4View;
+use Twig_Extension;
+use Twig_SimpleFunction;
 
-class PagerFantaExtension extends \Twig_Extension
+class PagerFantaExtension extends Twig_Extension
 {
 
     private $router;
-    /**
-     * [__construct description]
-     * @param Router $router [description]
-     */
+
     public function __construct(Router $router)
     {
         $this->router = $router;
     }
 
     /**
-     * [getFunctions description]
-     * @return \Twig_SimpleFunction[] [type] [description]
+     *
+     * @return Twig_SimpleFunction[]
      */
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('paginate', [$this, 'paginate'], ['is_safe' => ['html']])
+            new Twig_SimpleFunction('paginate', [$this, 'paginate'], ['is_safe' => ['html']])
         ];
     }
 
     /**
-     * [paginate description]
-     * @param Pagerfanta $paginatedResults [description]
-     * @param string $route [description]
-     * @param array $queryArgs [description]
-     * @return string [type]                       [description]
+     *
+     * @param Pagerfanta $paginatedResults
+     * @param string $route
+     * @param array $queryArgs
+     * @return string
      */
     public function paginate(Pagerfanta $paginatedResults, string $route, array $queryArgs = []): string
     {

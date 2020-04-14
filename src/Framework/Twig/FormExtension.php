@@ -2,9 +2,10 @@
 namespace Framework\Twig;
 
 use DateTime;
+use Twig_Extension;
 use Twig_SimpleFunction;
 
-class FormExtension extends \Twig_Extension
+class FormExtension extends Twig_Extension
 {
 
     public function getFunctions(): array

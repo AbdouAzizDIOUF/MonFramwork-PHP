@@ -6,16 +6,19 @@ use App\Blog\Table\PostTable;
 use Framework\Actions\RouterAwareAction;
 use Framework\Renderer\RendererInterface;
 use Framework\Router;
+use GuzzleHttp\Psr7\MessageTrait;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest as Request;
+use Psr\Http\Message\ResponseInterface;
 
 class BlogAction
 {
+    use RouterAwareAction;
 
     private $renderer;
     private $pdo;
     private $router;
-    use RouterAwareAction;
+    private $postTable;
 
     public function __construct(RendererInterface $renderer, Router $router, PostTable $postTable)
     {
@@ -24,6 +27,10 @@ class BlogAction
          $this->renderer = $renderer;
     }
 
+    /**
+     * @param Request $request
+     * @return MessageTrait|ResponseInterface|string
+     */
     public function __invoke(Request $request)
     {
         $id = $request->getAttribute('id');
@@ -33,13 +40,25 @@ class BlogAction
         return $this->index($request);
     }
 
+
+    /**
+     * la page d'acceuil
+     * @param Request $request
+     * @return string
+     */
     public function index(Request $request): string
     {
         $params = $request->getQueryParams();
         $posts = $this->postTable->findPagination(12, $params['p'] ?? 1);
+
         return $this->renderer->render('@blog/index', compact('posts'));
     }
 
+    /**
+     * detail d'un article
+     * @param Request $request
+     * @return MessageTrait|ResponseInterface|string
+     */
     public function show(Request $request)
     {
         $slug = $request->getAttribute('slug');
@@ -50,6 +69,7 @@ class BlogAction
                 'id' => $post->id
             ]);
         }
+        
         return $this->renderer->render('@blog/show', ['post' => $post]);
     }
 }

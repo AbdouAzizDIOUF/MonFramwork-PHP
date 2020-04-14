@@ -1,11 +1,16 @@
 <?php
 namespace Framework\Renderer;
 
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+use Twig_Environment;
+
 class TwigRenderer implements RendererInterface
 {
     private $twig;
 
-    public function __construct(\Twig_Environment $twig)
+    public function __construct(Twig_Environment $twig)
     {
         $this->twig = $twig;
     }
@@ -18,20 +23,27 @@ class TwigRenderer implements RendererInterface
     {
         $this->twig->getLoader()->addPath($path, $namespace);
     }
+
     /**
      *  Permet de rendre une vue
      *  le chemin peut etre precise avec des des namespaces rajoutés via addPath
      *  $this->render('@blog/view');
      * @param string $view
      * @param array $params
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function render(string $view, array $params = []): string
     {
         return $this->twig->render($view.'.twig', $params);
     }
+
     /**
      *  permet de rajouter des variable globales a ttes les vues
-     *
+     * @param string $key
+     * @param $value
      */
     public function addGlobal(string $key, $value): void
     {

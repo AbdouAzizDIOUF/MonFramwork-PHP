@@ -4,6 +4,8 @@ namespace Framework;
 //use Framework\Router\Route; //use Zend\Expressive\Router\FastRouteRouter; //use Zend\Expressive\Router\Route as
 //ZendRoute;
 use Psr\Http\Message\ServerRequestInterface;
+use Zend\Expressive\Router\FastRouteRouter;
+use Zend\Expressive\Router\Route;
 
 class Router
 {
@@ -11,55 +13,55 @@ class Router
 
     public function __construct()
     {
-        $this->router = new \Zend\Expressive\Router\FastRouteRouter();
+        $this->router = new FastRouteRouter();
     }
 
     /**
-     * [addRoute description]
-     * @param string      $path     [description]
-     * @param [type]      $callable [description]
-     * @param string|null $name     [description]
+     *
+     * @param string      $path
+     * @param $callable
+     * @param string|null $name
      */
     public function addRoute(string $path, $callable, ?string $name = null)
     {
-        $this->router->addRoute(new \Zend\Expressive\Router\Route($path, $callable, ['GET'], $name));
+        $this->router->addRoute(new Route($path, $callable, ['GET'], $name));
     }
 
     /**
      * [post description]
-     * @param  string      $path     [description]
-     * @param  [type]      $callable [description]
-     * @param  string|null $name     [description]
-     * @return [type]                [description]
+     * @param string $path
+     * @param $callable
+     * @param string|null $name
+     * @return void
      */
     public function post(string $path, $callable, ?string $name = null)
     {
-        $this->router->addRoute(new \Zend\Expressive\Router\Route($path, $callable, ['POST'], $name));
+        $this->router->addRoute(new Route($path, $callable, ['POST'], $name));
     }
 
     /**
-     * [delete description]
-     * @param  string      $path     [description]
-     * @param  [type]      $callable [description]
-     * @param  string|null $name     [description]
-     * @return [type]                [description]
+     *
+     * @param string $path
+     * @param $callable
+     * @param string|null $name
+     * @return void
      */
     public function delete(string $path, $callable, ?string $name = null)
     {
-        $this->router->addRoute(new \Zend\Expressive\Router\Route($path, $callable, ['DELETE'], $name));
+        $this->router->addRoute(new Route($path, $callable, ['DELETE'], $name));
     }
 
     /**
      *  @param ServerRequestInterface $request
      *  @return Route | null
      */
-    public function match(ServerRequestInterface $request): ?\Framework\Router\Route
+    public function match(ServerRequestInterface $request): ?Router\Route
     {
         $result = $this->router->match($request);
         if (!$result->isSuccess()) {
             return null;
         }
-            return new \Framework\Router\Route(
+            return new Router\Route(
                 $result->getMatchedRouteName(),
                 $result->getMatchedMiddleware(),
                 $result->getMatchedParams()
@@ -68,7 +70,7 @@ class Router
 
     public function crud(string $prefixPath, $callable, string $prefixName)
     {
-        $this->addRoute("$prefixPath", $callable, "$prefixName.index");
+        $this->addRoute((string)$prefixPath, $callable, "$prefixName.index");
         $this->addRoute("$prefixPath/new", $callable, "$prefixName.create");
         $this->post("$prefixPath/new", $callable);
         $this->addRoute("$prefixPath/{id:\d+}", $callable, "$prefixName.edit");
@@ -77,16 +79,16 @@ class Router
     }
 
     /**
-     * [generateUri description]
-     * @param  string $name        [description]
-     * @param  array  $params      [description]
-     * @param  array  $queryParams [description]
-     * @return [type]              [description]
+     *
+     * @param string $name
+     * @param array $params
+     * @param array $queryParams
+     * @return string|null
      */
     public function generateUri(string $name, array $params = [], array $queryParams = []): ?string
     {
         $uri = $this->router->generateUri($name, $params);
-        if (!is_null($queryParams)) {
+        if ($queryParams !== null) {
             return $uri . '?' . http_build_query($queryParams);
         }
         return $uri;

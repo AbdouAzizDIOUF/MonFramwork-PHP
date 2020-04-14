@@ -3,11 +3,12 @@
 
 use App\Blog\Actions\AdminBlogAction;
 use App\Blog\Actions\BlogAction;
+use Framework\Module;
 use Framework\Renderer\RendererInterface;
 use Framework\Router;
 use Psr\Container\ContainerInterface;
 
-class BlogModule extends \Framework\Module
+class BlogModule extends Module
 {
     const DEFINITIONS = __DIR__ . '/config.php';
     const MIGRATIONS = __DIR__ . '/db/migrations';

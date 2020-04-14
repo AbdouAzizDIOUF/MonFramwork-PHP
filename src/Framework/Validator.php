@@ -1,6 +1,7 @@
 <?php
 namespace Framework;
 
+use DateTime;
 use Framework\Validator\ValidationError;
 
 class Validator
@@ -26,7 +27,7 @@ class Validator
     {
         foreach ($keys as $key) {
             $value = $this->getValue($key);
-            if (is_null($value)) {
+            if ($value === null) {
                 $this->addErroor($key, 'required');
             }
         }
@@ -43,15 +44,15 @@ class Validator
     {
         $value = $this->getValue($key);
         $length = mb_strlen($value);
-        if (!is_null($min) && !is_null($max) && ($length < $min || $length > $max)) {
+        if ($min !== null && $max !== null && ($length < $min || $length > $max)) {
             $this->addErroor($key, 'betweenLength', [$min, $max]);
             return $this;
         }
-        if (!is_null($min) && $length < $min) {
+        if ($min !== null && $length < $min) {
             $this->addErroor($key, 'minLength', [$min]);
             return $this;
         }
-        if (!is_null($max) && $length > $max) {
+        if ($max !== null && $length > $max) {
             $this->addErroor($key, 'maxLength', [$max]);
         }
         return $this;
@@ -65,7 +66,7 @@ class Validator
     {
         $value = $this->getValue($key);
         $patern = '/^[a-z0-9]+(-[a-z0-9]+)*$/';
-        if (!is_null($value) && !preg_match($patern, $value)) {
+        if ($value !== null && !preg_match($patern, $value)) {
             $this->addErroor($key, 'slug');
         }
         return $this;
@@ -80,7 +81,7 @@ class Validator
     {
         foreach ($keys as $key) {
             $value = $this->getValue($key);
-            if (is_null($value) || empty($value)) {
+            if ($value === null || empty($value)) {
                 $this->addErroor($key, 'empty');
             }
         }
@@ -88,15 +89,15 @@ class Validator
 
     /**
      * le format de la date de mise a jour estb respecté
-     * @param  string $key
-     * @param  string $format
-     * @return
+     * @param string $key
+     * @param string $format
+     * @return Validator
      */
-    public function dateTime(string $key, string $format = "Y-m-d H:i:s"): self
+    public function dateTime(string $key, string $format = 'Y-m-d H:i:s'): self
     {
         $value = $this->getValue($key);
-        $date = \DateTime::createFromFormat($format, $value);
-        $errors = \DateTime::getLastErrors();
+        $date = DateTime::createFromFormat($format, $value);
+        $errors = DateTime::getLastErrors();
         if ($errors['error_count'] > 0 || $errors['warning_count'] > 0 || $date === false) {
             $this->addErroor($key, 'datetime', [$format]);
         }
@@ -111,9 +112,10 @@ class Validator
     {
         return empty($this->errors);
     }
+
     /**
      * recupere les erreurs
-     * @return
+     * @return array
      */
     public function getErrors(): array
     {
@@ -127,8 +129,8 @@ class Validator
 
     /**
      * recupre la valeur de l'element sinon elle renvoie null
-     * @param  string $key
-     * @return
+     * @param string $key
+     * @return mixed|null
      */
     private function getValue(string $key)
     {
