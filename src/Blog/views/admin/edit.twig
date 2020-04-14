@@ -4,19 +4,7 @@
     <h1>Editer l'article {{ item.name }}</h1>
 
     <form action="{{ path('blog.admin.edit', {id: item.id}) }}" method="post">
-        <div class="form-group">
-            {{ dump(errors) }}
-            <label for="name">Titre de l'article</label>
-            <input type="text" name="name" id="name" class="form-control" value="{{ item.name }}">
-        </div>
-        <div class="form-group">
-            <label for="slug">Titre de l'article</label>
-            <input type="text" name="slug" id="slug" class="form-control" value="{{ item.slug }}">
-        </div>
-        <div class="form-group">
-            <label for="content">Contenu</label>
-            <textarea name="content" id="content" rows="8" cols="70" class="form-control">{{ item.content }}</textarea>
-        </div>
+        {% include '@blog/admin/form.twig' %}
         <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
 

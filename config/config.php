@@ -11,7 +11,7 @@ use function DI\object;
     [
             'database.host' => 'localhost',
         'database.username' => 'root',
-        'database.password' => 'root',
+        'database.password' => 'Orangetigo1900',
             'database.name' => 'monsupersite',
                'views.path' => dirname(__DIR__).'/views',
           'twig.extensions' => [
@@ -19,7 +19,8 @@ use function DI\object;
                 get(\Framework\Twig\PagerFantaExtension::class),
                 get(\Framework\Twig\TestExtension::class),
                 get(\Framework\Twig\TimeExtension::class),
-                get(\Framework\Twig\FlashExtension::class)
+                get(\Framework\Twig\FlashExtension::class),
+                get(\Framework\Twig\FormExtension::class)
             ],
             SessionInterface::class => object(PHPSession::class),
             \Framework\Router::class => object(),

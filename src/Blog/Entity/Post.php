@@ -7,8 +7,8 @@ class Post
     public $name;
     public $slug;
     public $content;
-    public $creat_at;
-    public $updat_at;
+    public $create_at;
+    public $update_at;
 
     public function __construct()
     {

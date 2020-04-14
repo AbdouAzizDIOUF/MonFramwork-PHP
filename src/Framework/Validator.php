@@ -8,6 +8,10 @@ class Validator
     private $params;
     private $errors = [];
 
+    /**
+     * prend en paramettre la liste des paramettre issue du contenu de la page de soumission
+     * @param array $params
+     */
     public function __construct(array $params)
     {
         $this->params = $params;
@@ -15,8 +19,8 @@ class Validator
 
 /**
  * verifie si les champs sont presents sur le tableau
- * @param  [type] $keys [description]
- * @return [type]       [description]
+ * @param array
+ * @return self
  */
     public function required(string ...$keys): self
     {
@@ -28,7 +32,13 @@ class Validator
         }
         return $this;
     }
-
+/**
+ * verifie ou assure que la taille des elements sont biens respecté chaque element doit avoir un taille bien définie
+ * @param  string   $key
+ * @param  int      $min
+ * @param  int|null $max
+ * @return self
+ */
     public function length(string $key, ?int $min, ?int $max = null): self
     {
         $value = $this->getValue($key);
@@ -41,20 +51,20 @@ class Validator
             $this->addErroor($key, 'minLength', [$min]);
             return $this;
         }
-        if (!is_null($max) && $length < $max) {
+        if (!is_null($max) && $length > $max) {
             $this->addErroor($key, 'maxLength', [$max]);
         }
         return $this;
     }
     /**
-     * verifie que l'element est un slug
-     * @param  string $key [description]
-     * @return [type]      [description]
+     * verifie que l'element est un slug valide
+     * @param  string $key
+     * @return self
      */
     public function slug(string $key): self
     {
         $value = $this->getValue($key);
-        $patern = '/^([a-z0-9]+-?)+$/';
+        $patern = '/^[a-z0-9]+(-[a-z0-9]+)*$/';
         if (!is_null($value) && !preg_match($patern, $value)) {
             $this->addErroor($key, 'slug');
         }
@@ -63,8 +73,8 @@ class Validator
 
     /**
      * verifie que le champs n'est pas vide
-     * @param  [type] $keys [description]
-     * @return [type]       [description]
+     * @param   $keys
+     * @return self
      */
     public function notEmpty(string ...$keys): self
     {
@@ -76,6 +86,12 @@ class Validator
         }
     }
 
+    /**
+     * le format de la date de mise a jour estb respecté
+     * @param  string $key
+     * @param  string $format
+     * @return
+     */
     public function dateTime(string $key, string $format = "Y-m-d H:i:s"): self
     {
         $value = $this->getValue($key);
@@ -87,13 +103,17 @@ class Validator
         return $this;
     }
 
+    /**
+     * Si l'element est valide
+     * @return boolean
+     */
     public function isValid(): bool
     {
         return empty($this->errors);
     }
     /**
      * recupere les erreurs
-     * @return [type] [description]
+     * @return
      */
     public function getErrors(): array
     {
@@ -105,6 +125,11 @@ class Validator
         $this->errors[$key] = new ValidationError($key, $rule, $attributes);
     }
 
+    /**
+     * recupre la valeur de l'element sinon elle renvoie null
+     * @param  string $key
+     * @return
+     */
     private function getValue(string $key)
     {
         if (array_key_exists($key, $this->params)) {
