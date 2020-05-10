@@ -1,7 +1,7 @@
 <?php
     namespace App\Blog\Actions;
 
-// use Psr\Http\Message\RequestInterface;
+
 use App\Blog\Table\PostTable;
 use Framework\Actions\RouterAwareAction;
 use Framework\Renderer\RendererInterface;
@@ -16,7 +16,6 @@ class BlogAction
     use RouterAwareAction;
 
     private $renderer;
-    private $pdo;
     private $router;
     private $postTable;
 
@@ -44,12 +43,16 @@ class BlogAction
     /**
      * la page d'acceuil
      * @param Request $request
-     * @return string
+     * @return MessageTrait|ResponseInterface|string
      */
-    public function index(Request $request): string
+    public function index(Request $request)
     {
+        $val_param = 1;
         $params = $request->getQueryParams();
-        $posts = $this->postTable->findPagination(12, $params['p'] ?? 1);
+        if (isset($params['p']) && is_numeric($params['p'])){
+            $val_param = ($params['p']<=1) ? 1 : $params['p'];
+        }
+        $posts = $this->postTable->findPagination(12, $val_param);
 
         return $this->renderer->render('@blog/index', compact('posts'));
     }

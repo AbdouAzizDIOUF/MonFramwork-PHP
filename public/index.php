@@ -1,18 +1,17 @@
 <?php
 
+use App\Admin\AdminModule;
+use App\Blog\BlogModule;
 use DI\ContainerBuilder;
 use Framework\App;
 use function Http\Response\send;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-$modules = [
-	\App\Admin\AdminModule::class,
-	\App\Blog\BlogModule::class,
-];
-
 $builder = new ContainerBuilder();
 $builder->addDefinitions(dirname(__DIR__) . '/config/config.php');
+
+$modules = [AdminModule::class, BlogModule::class];
 
 foreach ($modules as $module) {
 	if ($module::DEFINITIONS) {

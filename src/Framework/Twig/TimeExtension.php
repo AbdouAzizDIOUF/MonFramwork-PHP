@@ -2,20 +2,21 @@
 namespace Framework\Twig;
 
 use DateTime;
-use Twig_Extension;
-use Twig_SimpleFilter;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class TimeExtension extends Twig_Extension
+
+class TimeExtension extends AbstractExtension
 {
 
     public function getFilters(): array
     {
         return [
-            new Twig_SimpleFilter('ago', [$this, 'ago'], ['is_safe' => ['html']])
+            new TwigFilter('ago', [$this, 'ago'], ['is_safe' => ['html']])
         ];
     }
 
-    public function ago(DateTime $date, string $format = 'd/m/Y H:i')
+    public function ago(DateTime $date, string $format = 'd/m/Y H:i'): string
     {
         return '<span class="timeago" datetime="' . $date->format(DateTime::ATOM) .'">' . $date->format($format) . '</span>';
     }

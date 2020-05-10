@@ -2,10 +2,10 @@
 namespace Framework\Router;
 
 use Framework\Router;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class RouterTwigExtension extends Twig_Extension
+class RouterTwigExtension extends AbstractExtension
 {
 
     private $router;
@@ -15,19 +15,18 @@ class RouterTwigExtension extends Twig_Extension
         $this->router = $router;
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return
         [
-            new Twig_SimpleFunction('path', [$this, 'pathFor'])
+            new TwigFunction('path', [$this, 'pathFor'])
         ];
     }
 
     /**
-     * [pathFor description]
-     * @param string $path [description]
-     * @param array $params [description]
-     * @return string [type]         [description]
+     * @param string $path
+     * @param array $params
+     * @return string
      */
     public function pathFor(string $path, array $params = []): string
     {

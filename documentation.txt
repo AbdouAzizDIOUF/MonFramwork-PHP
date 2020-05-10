@@ -62,24 +62,26 @@ Le PSR c'est l'organisme qui est chargé des standards pour PHP et la compatibli
 
             ****************************************************************
             *                                                              *
-            *   Quelques manipulation de la base de donnees avec phinx     *
+            *   Systeme de migration de la base de donnees avec Phinx      *
             *                                                              *
             ****************************************************************
 
 	7°) le librery robmorgan/phinx" est un outil de migration de base de données simple et tres efficasse
 
-*		-> composer require robmorgan/phinx		version:
-*
-*       -> vendor/bin/phinx init . // permet d'initialiser phinx et creer un fichier phinx.yml "fichier de configuration"
-*
-*       -> vendor/bin/phinx migrate // effectue la migration
-*
-*       -> vendor/bin/phinx create CreatePosteTable   // Creation de la table CreatePosteTable
-*
-*       -> vendor/bin/phinx seed:create PostSeeder // creation du fichier(PostSeeder.php) d'interaction avec la base de donnees (manipulation de donnees de la base)
-*
-*       -> vendor/bin/phinx seed:run //permet de lancer PostSeeder.php
-*
+		-> composer require robmorgan/phinx		version:
+
+        -> vendor/bin/phinx init . // permet d'initialiser phinx et creer un fichier phinx.yml "fichier de configuration de la base de donnees"
+
+        -> vendor/bin/phinx migrate // effectue la migration
+
+        -> vendor/bin/phinx create CreatePosteTable   // Creation de la table CreatePosteTable
+ 
+        -> vendor/bin/phinx seed:create PostSeeder // creation du fichier(PostSeeder.php) d'interaction avec la base de donnees (manipulation de donnees de la base)
+ 
+        -> vendor/bin/phinx seed:run //permet de lancer PostSeeder.php
+
+        -> vendor/bin/phinx create AddCategorieTable
+
 
 
 
@@ -92,9 +94,9 @@ Le PSR c'est l'organisme qui est chargé des standards pour PHP et la compatibli
 		-> composer require fzaninotto/faker    version:
 
 
-    9°) le librairy pagerfanta/pagerfanta // permet de faire la pagination
+	9°) le librairy pagerfanta/pagerfanta // permet de faire la pagination
 
-            -> composer require pagerfanta/pagerfanta;
+	        -> composer require pagerfanta/pagerfanta;
 
 
 

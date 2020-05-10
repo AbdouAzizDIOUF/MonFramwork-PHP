@@ -12,9 +12,10 @@ class ValidationError
                 'empty' => 'Le champs ne peut être vide',
                  'slug' => 'le champs %s n\'est pas un slug valide',
             'minLength' => 'Le champs %s doit contenir plus de %d carractéres',
-            'maxLength' => 'Le champs %s doit contenir moin de %d carractéres',
+            'maxLength' => 'Le champs %s doit contenir moins de %d carractéres',
         'betweenLength' => 'Le champs %s doit contenir entre %d et %d carractéres',
-             'datetime' => 'Le champs %s doit etre une date valide (%s)'
+             'datetime' => 'Le champs %s doit etre une date valide (%s)',
+               'exists' => 'le champ %s n\'existe pas sur la table %s'
     ];
 
     public function __construct(string $key, string $rule, array $attributes = [])
@@ -27,6 +28,7 @@ class ValidationError
     public function __toString()
     {
         $params = array_merge([$this->messages[$this->rule], $this->key], $this->attributes);
+
         return (string)sprintf(...$params);
     }
 }

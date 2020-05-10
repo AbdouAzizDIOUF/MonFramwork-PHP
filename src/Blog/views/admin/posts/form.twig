@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-4">
+        {{ form('name', item.name, "Titre de l'article") }}
+    </div>
+    <div class="col-md-4">
+        {{ form('category_id', item.category_id, "Categorie", {options: categories}) }}
+    </div>
+    <div class="col-md-4">
+        {{ form('slug', item.slug, "Lien de l'article") }}
+    </div>
+</div>
+{{ form('content', item.content, "content", {type: 'textarea'}) }}
+{{ form('create.at', item.create_at, "Date de création", {class: 'datepicker'}) }}

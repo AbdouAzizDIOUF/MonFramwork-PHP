@@ -13,10 +13,21 @@ class PHPSession implements SessionInterface {
 		}
 	}
 
+    /**
+     * Ajouter une information en session
+     * @param string $key
+     * @param $value
+     * @return mixed
+     */
+    public function set(string $key, $value): void{
+        $this->assurStarted();
+        $_SESSION[$key] = $value;
+    }
+
 	/**
 	 * Récupére une information en session
 	 * @param  string $key
-	 * @param  [type] $default
+	 * @param $default
 	 * @return mixed
 	 */
 	public function get(string $key, $default = null) {
@@ -25,17 +36,6 @@ class PHPSession implements SessionInterface {
 			return $_SESSION[$key];
 		}
 		return $default;
-	}
-
-	/**
-	 * Ajoute une information en session
-	 * @param string $key
-	 * @param $value
-	 * @return mixed
-	 */
-	public function set(string $key, $value): void{
-		$this->assurStarted();
-		$_SESSION[$key] = $value;
 	}
 
 	/**

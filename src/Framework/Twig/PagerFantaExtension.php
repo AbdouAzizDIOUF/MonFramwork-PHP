@@ -4,10 +4,10 @@ namespace Framework\Twig;
 use Framework\Router;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\View\TwitterBootstrap4View;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class PagerFantaExtension extends Twig_Extension
+class PagerFantaExtension extends AbstractExtension
 {
 
     private $router;
@@ -19,29 +19,30 @@ class PagerFantaExtension extends Twig_Extension
 
     /**
      *
-     * @return Twig_SimpleFunction[]
+     * @return TwigFunction[]
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
-            new Twig_SimpleFunction('paginate', [$this, 'paginate'], ['is_safe' => ['html']])
+            new TwigFunction('paginate', [$this, 'paginate'], ['is_safe' => ['html']])
         ];
     }
 
     /**
      *
-     * @param Pagerfanta $paginatedResults
+     * @param Pagerfanta $pagerfanta
      * @param string $route
      * @param array $queryArgs
      * @return string
      */
-    public function paginate(Pagerfanta $paginatedResults, string $route, array $queryArgs = []): string
+    public function paginate(Pagerfanta $pagerfanta, string $route, array $queryArgs = []): string
     {
         $view = new TwitterBootstrap4View();
-        return $view->render($paginatedResults, function ($page) use ($route, $queryArgs) {
+        return $view->render($pagerfanta, function ($page) use ($route, $queryArgs) {
             if ($page > 1) {
                 $queryArgs['p'] = $page;
             }
+
             return $this->router->generateUri($route, [], $queryArgs);
         });
     }

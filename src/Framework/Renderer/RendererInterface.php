@@ -26,4 +26,10 @@ interface RendererInterface
      * @param $value
      */
     public function addGlobal(string $key, $value): void;
+
+    /**
+     * Obtenir le chemin de la vue
+     * @return string|null
+     */
+    public function getPath(): ?string;
 }

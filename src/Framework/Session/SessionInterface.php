@@ -3,6 +3,14 @@ namespace Framework\Session;
 
 interface SessionInterface {
 
+    /**
+     * Ajoute une information en session
+     * @param string $key
+     * @param $value
+     * @return mixed
+     */
+    public function set(string $key, $value): void;
+
 	/**
 	 * Récupére une information en session
 	 * @param  string $key
@@ -10,14 +18,6 @@ interface SessionInterface {
 	 * @return mixed
 	 */
 	public function get(string $key, $default = null);
-
-	/**
-	 * Ajoute une information en session
-	 * @param string $key
-	 * @param $value
-	 * @return mixed
-	 */
-	public function set(string $key, $value): void;
 
 	/**
 	 * supprime une clé en session

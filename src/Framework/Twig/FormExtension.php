@@ -2,16 +2,16 @@
 namespace Framework\Twig;
 
 use DateTime;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class FormExtension extends Twig_Extension
+class FormExtension extends AbstractExtension
 {
 
     public function getFunctions(): array
     {
         return [
-            new Twig_SimpleFunction('field', [$this, 'field'], [
+            new TwigFunction('form', [$this, 'form'], [
                     'is_safe' => ['html'],
                     'needs_context' => true
                 ])
@@ -19,15 +19,15 @@ class FormExtension extends Twig_Extension
     }
 
     /**
-        * Génére le code HTML d'un champs
-        * @param  array       $context Contexte de la vue Twig
-        * @param  string      $key     Clef du champs
-        * @param  mixed      $value   Valeur du champs
-        * @param  string|null $label   label a utiliser
-        * @param  array       $options
-        * @return string
+    * Génére le code HTML d'un champs
+    * @param  array       $context Contexte de la vue Twig
+    * @param  string      $key     Clef du champs
+    * @param  mixed      $value   Valeur du champs
+    * @param  string|null $label   label a utiliser
+    * @param  array       $options
+    * @return string
     */
-    public function field(array $context, string $key, $value, ?string $label = null, array $options = []): string
+    public function form(array $context, string $key, $value, ?string $label = null, array $options = []): string
     {
         $type = $options['type'] ?? 'text';
         $error = $this->getErrorHtml($context, $key);
@@ -44,6 +44,8 @@ class FormExtension extends Twig_Extension
         }
         if ($type === 'textarea') {
             $input = $this->textarea($value, $attributes);
+        }elseif (array_key_exists('options', $options)){
+            $input = $this->select($value, $options['options'], $attributes);
         } else {
             $input = $this->input($value, $attributes);
         }
@@ -87,10 +89,44 @@ class FormExtension extends Twig_Extension
         return  '<textarea ' . $this->getHtmlFromArray($attributes) ." rows=\"8\" cols=\"70\">{$value}</textarea>";
     }
 
-    private function getHtmlFromArray(array $attributes)
+    /**
+     * Génère un <select>
+     * @param null|string $value
+     * @param array $options
+     * @param array $attributes
+     * @return string
+     */
+    private function select(?string $value, array $options, array $attributes): string
     {
-        return implode(' ', array_map(static function ($key, $value) {
-            return "$key=\"$value\"";
-        }, array_keys($attributes), $attributes));
+        $htmlOptions = array_reduce(array_keys($options), function (string $html, string $key) use ($options, $value) {
+            $params = ['value' => $key, 'selected' => $key === $value];
+            return $html . '<option ' . $this->getHtmlFromArray($params) . '>' . $options[$key] . '</option>';
+        }, "");
+        return '<select ' . $this->getHtmlFromArray($attributes) . ">$htmlOptions</select>";
     }
+
+    /**
+     * Transforme un tableau $clef => $valeur en attribut HTML
+     * @param array $attributes
+     * @return string
+     */
+    private function getHtmlFromArray(array $attributes): string
+    {
+        $htmlParts = [];
+        foreach ($attributes as $key => $value) {
+            if ($value === true) {
+                $htmlParts[] = (string) $key;
+            } elseif ($value !== false) {
+                $htmlParts[] = "$key=\"$value\"";
+            }
+        }
+        return implode(' ', $htmlParts);
+    }
+
+        /*private function getHtmlFromArray(array $attributes)
+            {
+            return implode(' ', array_map(static function ($key, $value) {
+                return "$key=\"$value\"";
+                }, array_keys($attributes), $attributes));
+            }*/
 }

@@ -1,8 +1,6 @@
 <?php
 namespace Framework;
 
-//use Framework\Router\Route; //use Zend\Expressive\Router\FastRouteRouter; //use Zend\Expressive\Router\Route as
-//ZendRoute;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\Expressive\Router\Route;
@@ -22,7 +20,7 @@ class Router
      * @param $callable
      * @param string|null $name
      */
-    public function addRoute(string $path, $callable, ?string $name = null)
+    public function addRoute(string $path, $callable, ?string $name = null): void
     {
         $this->router->addRoute(new Route($path, $callable, ['GET'], $name));
     }
@@ -34,7 +32,7 @@ class Router
      * @param string|null $name
      * @return void
      */
-    public function post(string $path, $callable, ?string $name = null)
+    public function post(string $path, $callable, ?string $name = null): void
     {
         $this->router->addRoute(new Route($path, $callable, ['POST'], $name));
     }
@@ -46,7 +44,7 @@ class Router
      * @param string|null $name
      * @return void
      */
-    public function delete(string $path, $callable, ?string $name = null)
+    public function delete(string $path, $callable, ?string $name = null): void
     {
         $this->router->addRoute(new Route($path, $callable, ['DELETE'], $name));
     }
@@ -68,9 +66,9 @@ class Router
             );
     }
 
-    public function crud(string $prefixPath, $callable, string $prefixName)
+    public function crud(string $prefixPath, $callable, string $prefixName): void
     {
-        $this->addRoute((string)$prefixPath, $callable, "$prefixName.index");
+        $this->addRoute($prefixPath, $callable, "$prefixName.index");
         $this->addRoute("$prefixPath/new", $callable, "$prefixName.create");
         $this->post("$prefixPath/new", $callable);
         $this->addRoute("$prefixPath/{id:\d+}", $callable, "$prefixName.edit");

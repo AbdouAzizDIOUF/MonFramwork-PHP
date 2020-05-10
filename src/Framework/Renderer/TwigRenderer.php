@@ -1,16 +1,16 @@
 <?php
 namespace Framework\Renderer;
 
+use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
-use Twig_Environment;
 
 class TwigRenderer implements RendererInterface
 {
     private $twig;
 
-    public function __construct(Twig_Environment $twig)
+    public function __construct(Environment $twig)
     {
         $this->twig = $twig;
     }
@@ -48,5 +48,14 @@ class TwigRenderer implements RendererInterface
     public function addGlobal(string $key, $value): void
     {
         $this->twig->addGlobal($key, $value);
+    }
+
+    /**
+     * Obtenir le chemin de la vue
+     * @return string|null
+     */
+    public function getPath(): ?string
+    {
+        return $this->twig->getLoader()-$this->getPath();
     }
 }

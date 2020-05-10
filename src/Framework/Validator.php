@@ -3,6 +3,7 @@ namespace Framework;
 
 use DateTime;
 use Framework\Validator\ValidationError;
+use PDO;
 
 class Validator
 {
@@ -18,11 +19,11 @@ class Validator
         $this->params = $params;
     }
 
-/**
- * verifie si les champs sont presents sur le tableau
- * @param array
- * @return self
- */
+    /**
+     * verifie si les champs sont presents sur le tableau
+     * @param array
+     * @return self
+     */
     public function required(string ...$keys): self
     {
         foreach ($keys as $key) {
@@ -34,7 +35,7 @@ class Validator
         return $this;
     }
 /**
- * verifie ou assure que la taille des elements sont biens respecté chaque element doit avoir un taille bien définie
+ * verifie ou assure que la taille des elements sont biens respectées et chaque element doit avoir un taille bien définie
  * @param  string   $key
  * @param  int      $min
  * @param  int|null $max
@@ -104,6 +105,18 @@ class Validator
         return $this;
     }
 
+    public function exists(string $key, string $table, PDO $pdo): self
+    {
+        $value = $this->getValue($key);
+        $statement = $pdo->prepare("SELECT id FROM {$table} WHERE id = ?");
+        $statement->execute([$value]);
+        if ($statement->fetchColumn() === false){
+            $this->addErroor($key, 'exists', [$table]);
+        }
+
+        return $this;
+    }
+
     /**
      * Si l'element est valide
      * @return boolean
@@ -128,7 +141,7 @@ class Validator
     }
 
     /**
-     * recupre la valeur de l'element sinon elle renvoie null
+     * recupre la valeur de l'element "la cle"
      * @param string $key
      * @return mixed|null
      */
@@ -139,4 +152,5 @@ class Validator
         }
         return null;
     }
+
 }

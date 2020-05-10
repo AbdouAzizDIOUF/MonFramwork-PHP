@@ -31,10 +31,15 @@ class FlashService
     public function error(string $message): void
     {
         $flash = $this->session->get($this->sessionKey, []);
-        $flash['success'] = $message;
+        $flash['errors'] = $message;
         $this->session->set($this->sessionKey, $flash);
     }
 
+    /**
+     * recupere le message de la session
+     * @param string $type
+     * @return string|null
+     */
     public function get(string $type): ?string
     {
         if ($this->message === null) {
@@ -44,6 +49,7 @@ class FlashService
         if (array_key_exists($type, $this->message)) {
             return $this->message[$type];
         }
+
         return null;
     }
 }

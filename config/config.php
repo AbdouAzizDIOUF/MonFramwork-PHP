@@ -11,8 +11,8 @@ use function DI\object;
     [
             'database.host' => 'localhost',
         'database.username' => 'root',
-        'database.password' => 'Orangetigo1900',
-            'database.name' => 'monsupersite',
+        'database.password' => 'root',
+            'database.name' => 'php_monsupersite',
                'views.path' => dirname(__DIR__).'/views',
           'twig.extensions' => [
                 get(\Framework\Router\RouterTwigExtension::class),
@@ -25,7 +25,7 @@ use function DI\object;
             SessionInterface::class => object(PHPSession::class),
             \Framework\Router::class => object(),
             \Framework\Renderer\RendererInterface::class => factory(\Framework\Renderer\TwigRendererFactory::class),
-            \PDO::class => function (ContainerInterface $c) {
+            PDO::class => static function (ContainerInterface $c) {
                 return new PDO(
                     'mysql:host=' .$c->get('database.host') . ';dbname=' .$c->get('database.name'),
                     $c->get('database.username'),

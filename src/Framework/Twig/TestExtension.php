@@ -1,15 +1,15 @@
 <?php
 namespace Framework\Twig;
 
-use Twig_Extension;
-use Twig_SimpleFilter;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class TestExtension extends Twig_Extension
+class TestExtension extends AbstractExtension
 {
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
-            new Twig_SimpleFilter('excerpt', [$this, 'excerpt'])
+            new TwigFilter('excerpt', [$this, 'excerpt'])
         ];
     }
 

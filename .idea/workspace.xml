@@ -20,34 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e13c9f85-c6d8-40ac-8689-b07fe35f5470" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Blog/Actions/CategorieCrudAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/Actions/PostCrudAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/Table/CategorieTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/create.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/edit.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/form.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/index.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/form.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Framework/Database/Table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/MonFramwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MonFramwork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/AdminModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AdminModule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/views/layout.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/BlogModule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Entity/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/db/migrations/20181030123612_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/db/migrations/20181030123612_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/db/seeds/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/db/seeds/PostSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Actions/RouterAwareAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Actions/RouterAwareAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/create.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/create.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/edit.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/form.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/index.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/PHPRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/PHPRenderer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/TwigRendererFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/TwigRendererFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" afterDir="false" />
@@ -63,9 +75,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,16 +150,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Blog/views/admin/categories" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Blog/views/admin/categories" />
+      <recent name="$PROJECT_DIR$/src/Blog/Actions" />
+      <recent name="$PROJECT_DIR$/src/Blog/Table" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Blog/views/admin/posts" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -174,7 +197,27 @@
       <workItem from="1586827969402" duration="148000" />
       <workItem from="1586828130947" duration="1557000" />
       <workItem from="1586865016579" duration="11132000" />
-      <workItem from="1586881502002" duration="10586000" />
+      <workItem from="1586881502002" duration="10777000" />
+      <workItem from="1586940741482" duration="3519000" />
+      <workItem from="1587049380018" duration="811000" />
+      <workItem from="1587054280991" duration="1528000" />
+      <workItem from="1587059362467" duration="713000" />
+      <workItem from="1587115866728" duration="648000" />
+      <workItem from="1587123278612" duration="2354000" />
+      <workItem from="1587127774834" duration="4233000" />
+      <workItem from="1587136179976" duration="125000" />
+      <workItem from="1587287611045" duration="644000" />
+      <workItem from="1587294870694" duration="2557000" />
+      <workItem from="1587301101567" duration="3690000" />
+      <workItem from="1587318181346" duration="86000" />
+      <workItem from="1587385555629" duration="622000" />
+      <workItem from="1587393095914" duration="3837000" />
+      <workItem from="1587408061579" duration="736000" />
+      <workItem from="1587586618826" duration="417000" />
+      <workItem from="1587592398885" duration="171000" />
+      <workItem from="1588457418281" duration="213000" />
+      <workItem from="1589009921901" duration="28579000" />
+      <workItem from="1589065754653" duration="33824000" />
     </task>
     <servers />
   </component>
@@ -191,28 +234,70 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="429" y="145" width="732" height="644" key="#Inspections" timestamp="1586906741006">
+    <state x="429" y="145" width="732" height="644" key="#Inspections" timestamp="1587304015467">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="429" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1586906741006" />
-    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586877313417">
+    <state x="429" y="145" width="732" height="644" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1587304015467" />
+    <state x="667" y="302" width="256" height="330" key="#Notifications" timestamp="1587287652051">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="608" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1586877313417" />
+    <state x="667" y="302" width="256" height="330" key="#Notifications/0.27.1600.873@0.27.1600.873" timestamp="1587287652051" />
+    <state x="0" y="125" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589113011279">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="0" y="125" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1600.873@0.27.1600.873" timestamp="1589113011279" />
+    <state x="608" y="182" width="419" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1589132318865">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="608" y="182" width="419" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1589132318865" />
+    <state x="653" y="27" width="867" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589124923249">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="653" y="27" width="867" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1600.873@0.27.1600.873" timestamp="1589124923249" />
+    <state x="533" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589150701592">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="533" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1600.873@0.27.1600.873" timestamp="1589150701592" />
     <state x="520" y="376" width="550" height="182" key="ComposerInitDialogKey" timestamp="1586865156171">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
     <state x="520" y="376" width="550" height="182" key="ComposerInitDialogKey/0.27.1600.873@0.27.1600.873" timestamp="1586865156171" />
-    <state x="289" y="98" width="1022" height="737" key="SettingsEditor" timestamp="1586870948575">
+    <state width="263" height="541" key="HiddenNamespacesPopup" timestamp="1589070581767">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="289" y="98" width="1022" height="737" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1586870948575" />
-    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1586895758374">
+    <state width="263" height="541" key="HiddenNamespacesPopup/0.27.1600.873@0.27.1600.873" timestamp="1589070581767" />
+    <state x="0" y="167" width="983" height="600" key="NewPhpClassDialog" timestamp="1589150602527">
       <screen x="0" y="27" width="1600" height="873" />
     </state>
-    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1586895758374" />
+    <state x="0" y="167" width="983" height="600" key="NewPhpClassDialog/0.27.1600.873@0.27.1600.873" timestamp="1589150602527" />
+    <state x="289" y="98" width="1022" height="737" key="SettingsEditor" timestamp="1589113051563">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="289" y="98" width="1022" height="737" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1589113051563" />
+    <state x="183" y="230" width="551" height="474" key="refactoring.ChangeSignatureDialog" timestamp="1589141432653">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="183" y="230" width="551" height="474" key="refactoring.ChangeSignatureDialog/0.27.1600.873@0.27.1600.873" timestamp="1589141432653" />
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1589141805219">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1589141805219" />
   </component>
 </project>
