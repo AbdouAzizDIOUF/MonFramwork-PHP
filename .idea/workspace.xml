@@ -20,53 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e13c9f85-c6d8-40ac-8689-b07fe35f5470" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Blog/Actions/CategorieCrudAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/Actions/PostCrudAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/Table/CategorieTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/create.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/edit.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/form.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/categories/index.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/form.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Framework/Database/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MonFramwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MonFramwork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AdminModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AdminModule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/views/layout.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/Actions/AdminBlogAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Actions/BlogAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/BlogModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/BlogModule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Entity/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Table/PostTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/create.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/create.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/edit.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/form.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Blog/views/admin/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/views/admin/posts/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Database/PaginatedQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/RendererInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Renderer/TwigRenderer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Router/RouterTwigExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/FlashService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/PHPSession.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Session/SessionInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FlashExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/FormExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/PagerFantaExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/TestExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/TestExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Twig/TimeExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Twig/TimeExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Framework/Validator/ValidationError.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Framework/Validator/ValidationError.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,8 +115,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -174,6 +130,7 @@
       <recent name="$PROJECT_DIR$/src/Blog/views/admin/posts" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -218,11 +175,12 @@
       <workItem from="1588457418281" duration="213000" />
       <workItem from="1589009921901" duration="28579000" />
       <workItem from="1589065754653" duration="33824000" />
+      <workItem from="1611105434691" duration="261000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
