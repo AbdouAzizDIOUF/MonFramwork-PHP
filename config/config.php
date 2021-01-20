@@ -1,7 +1,13 @@
 <?php
 
+use Framework\Router\RouterTwigExtension;
 use Framework\Session\PHPSession;
 use Framework\Session\SessionInterface;
+use Framework\Twig\FlashExtension;
+use Framework\Twig\FormExtension;
+use Framework\Twig\PagerFantaExtension;
+use Framework\Twig\TestExtension;
+use Framework\Twig\TimeExtension;
 use Psr\Container\ContainerInterface;
 use function DI\factory;
 use function DI\get;
@@ -15,12 +21,12 @@ use function DI\object;
             'database.name' => 'php_monsupersite',
                'views.path' => dirname(__DIR__).'/views',
           'twig.extensions' => [
-                get(\Framework\Router\RouterTwigExtension::class),
-                get(\Framework\Twig\PagerFantaExtension::class),
-                get(\Framework\Twig\TestExtension::class),
-                get(\Framework\Twig\TimeExtension::class),
-                get(\Framework\Twig\FlashExtension::class),
-                get(\Framework\Twig\FormExtension::class)
+                get(RouterTwigExtension::class),
+                get(PagerFantaExtension::class),
+                get(TestExtension::class),
+                get(TimeExtension::class),
+                get(FlashExtension::class),
+                get(FormExtension::class)
             ],
             SessionInterface::class => object(PHPSession::class),
             \Framework\Router::class => object(),

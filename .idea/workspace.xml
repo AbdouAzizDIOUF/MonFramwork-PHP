@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e13c9f85-c6d8-40ac-8689-b07fe35f5470" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +176,7 @@
       <workItem from="1589009921901" duration="28579000" />
       <workItem from="1589065754653" duration="33824000" />
       <workItem from="1611105434691" duration="261000" />
+      <workItem from="1611135652959" duration="121000" />
     </task>
     <servers />
   </component>
