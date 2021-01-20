@@ -1,9 +1,9 @@
 {
-    "name": "grafikart/mon-framwork",
+    "name": "diouf/mon-framework",
     "authors": [
         {
-            "name": "Grafikart",
-            "email": "contact@grafikart.fr"
+            "name": "AbdouAzizDIOUF",
+            "email": "abdouazizdiouf75@gmail.com"
         }
     ],
     "autoload":{
